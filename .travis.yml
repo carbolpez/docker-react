@@ -9,6 +9,7 @@ script:
     - docker run -e CI=true carbolpez/docker-react npm run test -- --coverage
 
 deploy:
+    skip_cleanup: true
     provider: elasticbeanstalk
     region: "eu-west-1"
     app: "docker"
